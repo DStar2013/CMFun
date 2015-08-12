@@ -3,7 +3,7 @@
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
-功能：下拉分页功能
+<h4 style="color:gray">功能：下拉分页功能</h4>
 
 函数名： CMFun.draw(fn, list, count, container)  <br/>
 
