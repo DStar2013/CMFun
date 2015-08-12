@@ -2,7 +2,8 @@
 基于jQuery封装的一些常用的Function
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
-<br/>
+# Paging
+
 函数名： CMFun.draw(fn, list, count, container)  <br/>
 
 参数：
