@@ -7,7 +7,7 @@
 
 函数名： CMFun.draw(fn, list, count, container)  <br/>
 
-参数：
+参数： <br/>
 fn: 执行执行绘制下拉的函数 <br/>
 list: 绘制数据json数组 [{}, {}] <br/>
 count: 绘制数据json数组长度 <br/>
