@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,61 +12,45 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <title>Cmfun by DStar2013</title>
-  </head>
+</head>
 
-  <body>
-    <header>
-      <div class="inner">
+<body>
+<header>
+    <div class="inner">
         <h1>CMFun</h1>
         <h2>基于jQuery封装的一些常用的Function</h2>
-        <a href="https://github.com/DStar2013/CMFun" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+        <a href="https://github.com/DStar2013/CMFun" class="button"><small>View project on</small>GitHub</a>
+    </div>
+</header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
+<div id="content-wrapper">
+    <div class="inner clearfix">
         <section id="main-content">
-          <div>
-            <p>1、分页方法Demo:</p>
-            <input type="text" style="width:268px;height:20px;">
-          </div>
+            <div>
+                <p>1、分页方法Demo:</p>
+                <input type="text" style="width:268px;height:20px;" id="PagingInput">
+                <div class="ui-selector unselectable ui-asearch in points-ltlb StarPop" id="PagingLayer" style="position: absolute; width: 268px; display:none; z-index:5;">
+                  <div class="ui-selector-list">
+                    <div class="list"></div>
+                  </div>
+                  <div class="ui-paging"><div class="asp_net_pager"></div></div>
+                </div>
+            </div>
         </section>
 
         <aside id="sidebar">
-          <p class="repo-owner"><a href="https://github.com/DStar2013/CMFun"></a> is maintained by <a href="https://github.com/DStar2013">DStar2013</a>.</p>
+            <p class="repo-owner">
+                <a href="https://github.com/DStar2013/CMFun"></a> is maintained by <a href="https://github.com/DStar2013">DStar2013</a>.
+            </p>
         </aside>
-      </div>
     </div>
-    
-    <div class="ui-selector unselectable ui-asearch in points-ltlb" style="width: 268px; min-width: 280px;">
-          <div class="ui-selector-list">
-            <div class="list">
-              <a href="javascript:void(0);" data-text="judy's" data-value="as|121.450677,31.224779|上海市|上海市静安区铜仁路142、146|judy's" class="selected">judy's<br><span class="description">上海市静安区铜仁路142、146</span></a><a href="javascript:void(0);" data-text="ZAPATA'S" data-value="as|121.449346,31.208268|上海市|上海市徐汇区衡山路5号|ZAPATA'S">ZAPATA'S<br><span class="description">上海市徐汇区衡山路5号</span></a><a href="javascript:void(0);" data-text="Levi's" data-value="as|121.521966,31.288890|上海市|上海市杨浦区黄兴路1618号大润发杨浦店|Levi's">Levi's<br><span class="description">上海市杨浦区黄兴路1618号大润发杨浦店</span></a><a href="javascript:void(0);" data-text="kathleen's" data-value="as|121.470922,31.231092|上海市|上海市黄浦区南京西路325号上海美术馆5层|kathleen's">kathleen's<br><span class="description">上海市黄浦区南京西路325号上海美术馆5层</span></a><a href="javascript:void(0);" data-text="吉范尼斯" data-value="as|121.405548,31.203643|上海市|上海市长宁区遵义南路5号喜来登酒店上海太平洋大饭店店27层|吉范尼斯">吉范尼斯<br><span class="description">上海市长宁区遵义南路5号喜来登酒店上海太平洋大饭店店27层</span></a><a href="javascript:void(0);" data-text="Levi's(南京西路)" data-value="as|121.461487,31.231021|上海市|上海市静安区南京西路790号|Levi's(南京西路)">Levi's(南京西路)<br><span class="description">上海市静安区南京西路790号</span></a><a href="javascript:void(0);" data-text="Levi's(百联又一城购物中心)" data-value="as|121.515838,31.301538|上海市|上海市杨浦区淞沪路8号百联又一城购物中心5层07|Levi's(百联又一城购物中心)">Levi's(百联又一城购物中心)<br><span class="description">上海市杨浦区淞沪路8号百联又一城购物中心5层07</span></a>
-            </div>
-          </div>
+</div>
 
-          <div class="ui-paging" data-prevent-click="true">
-            <div class="asp_net_pager" pindex="1">
-              <a class="undo">&lt;=</a>
-              <a class="undo prev"><i></i>&lt;-</a>
-              <a class="current">1</a>
-              <a class="otherPage" title="转到第2页" href="javascript:void(0);" pindex="2">2</a>
-              <a class="otherPage" title="转到第3页" href="javascript:void(0);" pindex="3">3</a>
-              <a class="otherPage" title="转到第4页" href="javascript:void(0);" pindex="4">4</a>
-              <a class="otherPage" title="转到第5页" href="javascript:void(0);" pindex="5">5</a>
-              <a class="otherPage" title="转到第6页" href="javascript:void(0);" pindex="6">...</a>
-              <a class="otherPage next" href="javascript:void(0);" pindex="2" title="转到第2页">-&gt;<i></i></a>
-              <a class="otherPage" href="javascript:void(0);" pindex="10" title="转到第10页">=&gt;</a>
-              <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-          </div>
-    </div>
 
-  <script type="text/javascript" src="javascripts/jquery-1.11.2.js"></script>
-  <script type="text/javascript" src="javascripts/CMFun.js"></script>
-  <script type="text/javascript" src="javascripts/main.js"></script>
-  </body>
+
+<script type="text/javascript" src="javascripts/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="javascripts/CMFun.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
+</body>
 </html>
