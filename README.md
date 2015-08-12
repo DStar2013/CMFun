@@ -2,7 +2,8 @@
 基于jQuery封装的一些常用的Function
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
-# Paging
+
+功能：下拉分页功能
 
 函数名： CMFun.draw(fn, list, count, container)  <br/>
 
