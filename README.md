@@ -15,5 +15,16 @@ container: 分页Page所在Div的jQuery对象 <br/>
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
+<h4 style="color:gray">功能：鼠标悬浮浮层功能</h4>
+
+函数名： CMFun.Hover.init(tid, eid, cfg) <br/>
+
+参数： <br/>
+tid：目标base对象的id  <br/>
+eid：悬浮浮层对象的id  <br/>
+cfg：json的配置参数，可选，{topFix: (Int), leftFix: (Int)}  <br/>
+
+
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
 #
