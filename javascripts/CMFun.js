@@ -227,7 +227,9 @@
 	})();
 	//☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 	// Form 提交Function
-	// 可接受参数为json或者string字符串
+	// 可接受参数为json或者html字符串(包含和不包含<form>结构的)
+	// Arg1: url Arg2: method: POST/GET Arg3: target: _blank/_self
+	// 
 	_.FormSubmit = (function() {
 		var FS = function(opt) {
 			var f = this._form = this._form || function() {

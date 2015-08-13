@@ -64,13 +64,14 @@
 	//
 	(function() {
 		//FormSubmit
-
-
-
+		$('#FormSubmit').bind('click', function() {
+			$('#FormSubmitDesc').mask();
+		});
+		//补充一个关闭的结构
+		$('#FormSubmitDesc').click(function(){
+			$(this).unmask()
+		})
 	})();
-
-
-
 	
 
 	//d

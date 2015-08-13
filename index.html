@@ -134,11 +134,20 @@
     </div>
     <div class="heart"></div>
   </div>
-<div>
+</div>
+
+<div id="FormSubmitDesc" class="ui-modal ui-loading" style="position:absolute;display:none;">
+  <p>Submit可传参数类型</p>
+  <p>1: Json数据格式({url:'',method:'POST',target:'_blank',data:{ key : value }})</P>
+  <p>2: html字符串，含有&lt;form&gt;结构( &lt;form method="POST" target="_blank" action="xxx"&gt; &lt;input type="hidden" name="xxx" value="val"&gt; &lt;/form&gt; )</P>
+  <p>3: html结构，不含&lt;form&gt;字符串( &lt;input type="hidden" name="xxx" value="val"&gt; )</P>    
+</div>
 <!---->
+
 
 <script type="text/javascript" src="javascripts/jquery-1.11.2.js"></script>
 <script type="text/javascript" src="javascripts/CMFun.js"></script>
 <script type="text/javascript" src="javascripts/main.js"></script>
+
 </body>
 </html>
