@@ -412,3 +412,11 @@
 	left: 2px;
 	-webkit-transform:rotate(90deg);
 }
+
+.btn {
+	width: 160px;
+	height: 32px;
+	color: #fff;
+	border-color: #88EADE;
+	background-color: #2e7bcf;
+}
