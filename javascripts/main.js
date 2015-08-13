@@ -43,9 +43,12 @@
 		//
 		data.length < 6 ? drawContent(0, 5) : CMFun.Paging.draw(drawContent, data, 5, pL.find('div.asp_net_pager'));
 	})();
-
-
-
+	//Hover悬浮效果方法
+	(function() {
+		//调用悬浮
+		CMFun.Hover.init('HoverTarget', 'HoverLayer', {});
+	})();
+	//
 
 
 

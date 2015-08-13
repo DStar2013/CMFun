@@ -8,26 +8,100 @@
 	//arg1: base对象id
 	//arg2: 浮层对象id
 	//arg3: json配置，{topFix: (Int), leftFix: (Int)}
-	_.HoverInit = (function() {
+	_.Hover = (function() {
 		function _hover(tid, eid, cfg) {
 			var leftFix = (cfg && cfg.leftFix) || 0,
-				topFix = (cfg && cfg.topFix) || 0;
-			target.bind('mouseover', function() {
-				if (el.css) {
-
+				topFix = (cfg && cfg.topFix) || 0,
+				target = $('#' + tid),
+				el = $('#' + eid);
+			target.bind('mouseover', function(e) {
+				if (el.css('display') != 'none') {
+					return false;
 				}
-
+				var innerWidth = window.innerWidth || document.documentElement.clientWidth || document.body.offsetWidth;
+				var elWidth = getHideWidth(el);
+				var left = (target.offset().left) + leftFix;
+				if (innerWidth - left < elWidth + 20) {
+					left = left - (elWidth - (innerWidth - left)) - 40;
+				}
+				el.css({
+					'top': (target.offset().top + topFix) + 'px',
+					'left': left + 'px'
+				});
+				el.data('fi', window.setTimeout(function() {
+					FadeIn(el.get(0));
+				}, 150));
+				window.clearTimeout(el.data('fo'));
+			}).bind('mouseout', function(e) {
+				window.clearTimeout(el.data('fi'));
+				el.data('fo', window.setTimeout(function() {
+					FadeOut(el.get(0));
+				}, 500));
 			});
-
-
+			el.bind('mouseover', function(e) {
+				window.clearTimeout(el.data('fo'));
+			}).bind('mouseout', function(e) {
+				window.clearTimeout(el.data('fi'));
+				el.data('fo', window.setTimeout(function() {
+					FadeOut(el.get(0));
+				}, 500));
+			});
 		}
-
-		//
+		//获取隐藏高度
 		function getHideWidth(cDom) {
-
+			cDom.css({
+				'visibility': 'hidden',
+				'display': 'block'
+			});
+			var width = cDom.width();
+			cDom.css({
+				'visibility': '',
+				'display': 'none'
+			});
+			return width;
 		}
+        function FadeIn(el) {
+            if (el.getAttribute('fading') == 'true') {
+                return false;
+            }
+            el.style.display = 'block';
+            el.style.opacity = 0;
+            el.style.filter = 'Alpha(opacity=' + 0 + ')';
+            el.setAttribute('fading', 'true');
+            var o = 0;
+            var fi = setInterval(function () {
+                if (o <= 10) {
+                    el.style.opacity = o / 10;
+                    el.style.filter = 'Alpha(opacity=' + o * 10 + ')';
+                    o++;
+                } else {
+                    clearInterval(fi);
+                    el.setAttribute('fading', 'false');
+                }
+            }, 20);
+        }
+        function FadeOut(el) {
+            if (el.getAttribute('fading') == 'true') {
+                return false;
+            }
+            el.setAttribute('fading', 'true');
+            var o = 10;
+            var fo = setInterval(function () {
+                if (o >= 0) {
+                    el.style.opacity = o / 10;
+                    el.style.filter = 'Alpha(opacity=' + o * 10 + ')';
+                    o--;
+                } else {
+                    clearInterval(fo);
+                    el.style.display = 'none';
+                    el.setAttribute('fading', 'false');
+                }
+            }, 20);
+        }
 
-
+        return {
+        	init: _hover
+        }
 	})();
 	//
 	_.Paging = (function() {
