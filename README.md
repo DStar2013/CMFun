@@ -53,5 +53,18 @@ S：millisecond <br/>
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
+<h4 style="color:gray">功能：Submit Form 提交表单</h4>
+
+函数名：CMFun.FormSubmit({})
+
+参数： <br/>
+url:  Action的地址  <br/>
+method:  POST/GET   <br/>
+target:  _blank/_self   <br/>
+data:  data数据格式为json格式    <br/>
+
+也可以将整个form 的html字符串传入，或者不包含form的html字符串也可以当data传入
+
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
 #
