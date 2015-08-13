@@ -103,7 +103,8 @@
         	init: _hover
         }
 	})();
-	//
+	//☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+	//Paging 分页方法
 	_.Paging = (function() {
 		var P = {
 			draw: function(fn, list, count, container) {
@@ -220,12 +221,59 @@
 			}
 		}
 
-
 		return {
 			draw: P.draw
 		}
 	})();
+	//☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+	// Form 提交Function
+	// 可接受参数为json或者string字符串
+	_.FormSubmit = (function() {
+		var FS = function(opt) {
+			var f = this._form = this._form || function() {
+				var f = document.createElement('form');
+				f.style.display = 'none';
+				document.body.appendChild(f);
+				return f;
+			}();
+			var d = this._div = this._div || function() {
+				var d = document.createElement('div');
+				d.style.display = 'none';
+				document.body.appendChild(d);
+				return d;
+			}();
+			//
+			if (opt.data) {
+				if (typeof opt.data == 'object') {
+					var html = [],
+						d = opt.data;
+					for (var n in d) {
+						if (!d.hasOwnProperty(n)) continue;
+						var v = d[n] === undefined || d[n] === null ? '' : d[n].toString();
+						v = v.replace(/\"/gi, '\\"');
+						html.push('<input type=hidden name="' + n + '" value="' + v + '"/>');
+						opt.data = html.join('');
+					}
+					$(f).attr('action', opt.url)
+						.attr('method', opt.method || 'GET')
+						.attr('target', opt.target || '_self')
+						.html(opt.data);
+					f.submit();
+				} else {
+					if (opt.data.indexOf('</form>') > -1) {
+						$(d).html(opt.data).find('form')[0].submit();
+					} else {
+						$(f).attr('action', opt.url)
+							.attr('method', opt.method || 'GET')
+							.attr('target', opt.target || '_self')
+							.html(opt.data);
+						f.submit();
+					}
+				}
+			}
+		}
 
-
+		return FS;
+	})();
 
 })(jQuery, window);
