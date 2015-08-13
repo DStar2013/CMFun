@@ -37,4 +37,21 @@ $().unmask()： 弹出层收起
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
+<h4 style="color:gray">功能：时间格式的Format</h4>
+
+函数名： Date .Format('yyyy-MM-dd hh:mm:ss q S')
+
+参数：  <br/>
+yyyy：年份  <br/>
+MM：月份  <br/>
+dd：天数  <br/>
+hh：小时  <br/>
+mm：分钟  <br/>
+ss：秒钟  <br/>
+q：季度  <br/>
+S：millisecond <br/>
+
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+
+
 #
