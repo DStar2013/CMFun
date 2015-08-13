@@ -24,6 +24,16 @@ tid：目标base对象的id  <br/>
 eid：悬浮浮层对象的id  <br/>
 cfg：json的配置参数，可选，{topFix: (Int), leftFix: (Int)}  <br/>
 
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+
+<h4 style="color:gray">功能：模态弹出层弹出功能</h4>
+
+函数名：$(xxx).mask()  $(xxx).unmask()   
+
+参数： <br/>
+extend扩展了jQ的$.fn的方法 <br/>
+$().mask()： 弹出层弹出
+$().unmask()： 弹出层收起 
 
 ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
