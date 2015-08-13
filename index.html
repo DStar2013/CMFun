@@ -9,10 +9,11 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="stylesheets/ui.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/extend.css">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Cmfun by DStar2013</title>
+    <title>CMFun by DStar2013</title>
 </head>
 
 <body>
@@ -39,9 +40,11 @@
             </div><hr/>
             <div>
               <h2>2、悬浮浮层方法 Demo:</h2>
+              <p id="HoverTarget" style="text-decoration:underline;color:rgb(97, 84, 79);">悬浮提示</p>
 
             </div>
         </section>
+
 
         <aside id="sidebar">
             <p class="repo-owner">
@@ -53,6 +56,64 @@
 </div>
 
 
+
+<!---->
+<div id="HoverLayer" style="display:none;position:absolute;">
+  <!-- green -->
+  <div class="g-c-container">
+    <div class="camera" >
+      <div class="top"></div>
+      <div class="body">
+        <div class="circle"></div>
+        <div class="flash"></div>
+      </div>
+    </div>
+    <div class="horn">
+      <div class="h-body"></div>
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
+      <div class="shape-3"></div>
+    </div>
+    <div class="gamepad">
+      <div class="line-2"></div>
+      <div class="gp_body">
+        <div class="shape-4"></div>
+        <div class="shape-5"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+    </div>
+    <div class="heart"></div>
+  </div>
+  <!-- Colored -->
+  <div class="c-container">
+    <div class="camera" >
+      <div class="top"></div>
+      <div class="body">
+        <div class="circle"></div>
+        <div class="flash"></div>
+      </div>
+    </div>
+    <div class="horn">
+      <div class="h-body">
+      </div>
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
+      <div class="shape-3"></div>
+    </div>
+    <div class="gamepad">
+      <div class="line-2"></div>
+      <div class="gp_body">
+        <div class="shape-4"></div>
+        <div class="shape-5"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+    </div>
+    <div class="heart"></div>
+  </div>
+<div>
+<!---->
 
 <script type="text/javascript" src="javascripts/jquery-1.11.2.js"></script>
 <script type="text/javascript" src="javascripts/CMFun.js"></script>
