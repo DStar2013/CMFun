@@ -277,8 +277,14 @@
 
 		return FS;
 	})();
+	//☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+	//isEmpty 判断字符串是否为空的方法
+	//arg1: 字符串
+	_.isEmpty = function (str) {
+		return str === null || str === undefined || (typeof str == "string" && str.length == 0);
+	}
 
-
+	
 	//extend函数扩展
 	$.extend($.fn, {
 		mask: function(o) {
